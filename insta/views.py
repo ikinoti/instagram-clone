@@ -25,3 +25,10 @@ class PostCreateView(CreateView):
     form.instance.author = self.request.user
     return super().form_valid(form)
 
+class PostDetailView(DetailView):
+  template_name = 'insta/post_detail.html'
+  queryset = Post.objects.all().filter(created_date__lte=timezone.now())
+
+  def get_object(self):
+    id_ = self.kwargs.get('id')
+    return get_object_or_404(Post, id=id_)
