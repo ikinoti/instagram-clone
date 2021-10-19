@@ -44,7 +44,7 @@ header {
   display: flex;
   justify-content: flex-end;
   width: 30%;
-  padding-left: 100px;
+  /* padding-left: 100px; */
 }
 
 .contact_icons a {
@@ -134,7 +134,7 @@ header {
   padding: 5px;
   color: #ccc;
 }
-.post_image {
+.post_image img {
   width: 100%;
   height: 614px;
 }
